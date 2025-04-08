@@ -1,97 +1,109 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# 🏦 Stanbik Banking App  
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
+![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20Android-lightgrey?style=for-the-badge)
 
-## Step 1: Start Metro
+A high-performance mobile banking app built with **React Native**, **AWS**, and **Redux**, optimized for all devices with a lean size (<100MB).
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📺 Demo Video  
+[![Stanbik App Demo](https://via.placeholder.com/800x450/2D3748/FFFFFF?text=▶️+Play+Demo+Video)](https://your-demo-video-link-here)  
+*(Click the image above to watch the full demo)*  
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
-npm start
+## 🚀 Key Features  
+| Feature          | Technology Used |  
+|------------------|----------------|  
+| **Biometric Login** | AWS Cognito + React Native Keychain |  
+| **Real-Time Transactions** | AWS AppSync + DynamoDB |  
+| **Offline Mode** | Redux Persist + SQLite |  
+| **Adaptive UI** | `useWindowDimensions()` + Responsive Grids |  
 
-# OR using Yarn
-yarn start
+---
+
+## 🛠️ Quick Setup  
+
+```bash
+# 1. Clone repo
+git clone https://github.com/yourusername/stanbik-banking.git
+
+# 2. Install dependencies
+yarn install
+
+# 3. Start (choose one)
+yarn android   # For Android
+yarn ios       # For iOS (requires pod install)
 ```
 
-## Step 2: Build and run your app
+> 💡 **AWS Configuration Required**: Run `amplify init` and configure your backend services.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+---
 
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+## 🧩 Project Structure  
+```
+src/
+├── auth/           # AWS Cognito integration
+├── components/     # Shared UI (responsive)
+├── features/       # Redux slices (RTK Query)
+├── hooks/          # Custom hooks (e.g. useResponsive)
+└── screens/        # Device-optimized screens
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 📱 Multi-Screen Support  
+**How we handle different devices:**  
+```jsx
+// Example: Responsive Hook
+import { useWindowDimensions } from 'react-native';
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+export const useDeviceType = () => {
+  const { width } = useWindowDimensions();
+  return width >= 768 ? 'TABLET' : 'PHONE';
+};
 
-```sh
-bundle install
+// Usage in components
+const { headerSize, padding } = deviceType === 'TABLET' 
+  ? { headerSize: 32, padding: 24 } 
+  : { headerSize: 24, padding: 16 };
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
+## 🏗️ Built With  
+- **Frontend**: React Native 0.72 + TypeScript  
+- **State**: Redux Toolkit (RTK Query)  
+- **Backend**: AWS Amplify (Cognito, DynamoDB, Lambda)  
+- **Navigation**: React Navigation 6.x  
+- **CI/CD**: GitHub Actions + AWS CodePipeline  
+
+---
+
+## 📜 License  
+MIT © [Your Name]  
+
+[![Star on GitHub](https://img.shields.io/github/stars/yourusername/stanbik-banking.svg?style=social)](https://github.com/yourusername/stanbik-banking/stargazers)  
+**Pro Tip:** Watch the [demo video](#-demo-video) to see the app in action!  
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### Key Changes:
+1. **Video-Centric Demo Section**:  
+   - Uses a clickable placeholder thumbnail (replace with your actual video link)  
+   - Clear call-to-action to watch the demo  
 
-```sh
-# Using npm
-npm run ios
+2. **Feature Table**:  
+   Replaces screenshots with a clean comparison table linking features to tech  
 
-# OR using Yarn
-yarn ios
-```
+3. **Added Value**:  
+   - Project structure visualization  
+   - Real code snippet for responsive design  
+   - GitHub star button for engagement  
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+4. **Placeholders to Replace**:  
+   - `https://your-demo-video-link-here` → Your video URL (YouTube/GitHub Assets)  
+   - `yourusername` → Your GitHub username  
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This version keeps your demo as the hero element while maintaining all technical details.
