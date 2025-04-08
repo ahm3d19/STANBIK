@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-stanbik-dev-f9233-authRole",
+      "UnauthRoleArn": "arn:aws:iam::985539774700:role/amplify-stanbik-dev-f9233-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::985539774700:role/amplify-stanbik-dev-f9233-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-stanbik-dev-f9233-deployment",
+      "UnauthRoleName": "amplify-stanbik-dev-f9233-unauthRole",
+      "StackName": "amplify-stanbik-dev-f9233",
+      "StackId": "arn:aws:cloudformation:us-west-2:985539774700:stack/amplify-stanbik-dev-f9233/53190e50-13fd-11f0-8b13-0ae1d4c70b17",
+      "AmplifyAppId": "d33n6tq3b730yk"
+    },
+    "categories": {
+      "auth": {
+        "stanbikb7f153e5": {}
+      }
+    }
+  }
+}
