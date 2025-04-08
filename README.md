@@ -9,7 +9,7 @@
 A high-performance mobile banking app built with **React Native**, **AWS**, and **Redux**, optimized for all devices with a lean size (<100MB).
 
 ## 📺 Demo Video  
-[![Stanbik App Demo](https://via.placeholder.com/800x450/2D3748/FFFFFF?text=▶️+Play+Demo+Video)](https://your-demo-video-link-here)  
+[![Stanbik App Demo] ()
 *(Click the image above to watch the full demo)*  
 
 ---
@@ -83,27 +83,8 @@ const { headerSize, padding } = deviceType === 'TABLET'
 ---
 
 ## 📜 License  
-MIT © [Your Name]  
+MIT © [ahm3d19]  
 
-[![Star on GitHub](https://img.shields.io/github/stars/yourusername/stanbik-banking.svg?style=social)](https://github.com/yourusername/stanbik-banking/stargazers)  
+[![Star on GitHub](https://img.shields.io/github/stars/ahm3d19/stanbik-banking.svg?style=social)](https://github.com/ahm3d19/stanbik-banking/stargazers)  
 **Pro Tip:** Watch the [demo video](#-demo-video) to see the app in action!  
 ```
-
-### Key Changes:
-1. **Video-Centric Demo Section**:  
-   - Uses a clickable placeholder thumbnail (replace with your actual video link)  
-   - Clear call-to-action to watch the demo  
-
-2. **Feature Table**:  
-   Replaces screenshots with a clean comparison table linking features to tech  
-
-3. **Added Value**:  
-   - Project structure visualization  
-   - Real code snippet for responsive design  
-   - GitHub star button for engagement  
-
-4. **Placeholders to Replace**:  
-   - `https://your-demo-video-link-here` → Your video URL (YouTube/GitHub Assets)  
-   - `yourusername` → Your GitHub username  
-
-This version keeps your demo as the hero element while maintaining all technical details.
