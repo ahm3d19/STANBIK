@@ -8,7 +8,7 @@
 
 A high-performance mobile banking app built with **React Native**, **AWS**, and **Redux**, optimized for all devices with a lean size (<100MB).
 
-## 📺 Demo Video  
+## 📲 Demo Video  
 [![Stanbik App Demo] 
 
 https://github.com/user-attachments/assets/57255b69-7ed2-4ab3-814d-8f2d118e4f00
